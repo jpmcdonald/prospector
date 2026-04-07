@@ -1,0 +1,9 @@
+.env
+data/inbox/*.csv
+data/snapshots/*.csv
+data/archive/*.csv
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store

@@ -1,0 +1,18 @@
+services:
+  neo4j:
+    image: neo4j:5-community
+    container_name: prospector-neo4j
+    ports:
+      - "7688:7687"
+      - "7475:7474"
+    volumes:
+      - prospector_neo4j_data:/data
+      - prospector_neo4j_logs:/logs
+    environment:
+      - NEO4J_AUTH=patrick/${NEO4J_PASSWORD}
+      - NEO4J_server_memory_heap_max__size=1G
+    restart: unless-stopped
+
+volumes:
+  prospector_neo4j_data:
+  prospector_neo4j_logs:

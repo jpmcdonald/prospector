@@ -1,0 +1,50 @@
+# Keyword lists for the Navigator paste parser.
+# Edit freely — no code changes required.
+# Matching is case-insensitive substring on title + company.
+
+banker:
+  - bank
+  - commercial lending
+  - svp
+  - credit
+  - financial institution
+  - trust company
+
+cepa:
+  - exit planning
+  - cepa
+  - business transition
+  - m&a advisor
+  - business broker
+
+manufacturer_titles:
+  - president
+  - owner
+  - founder
+  - ceo
+
+manufacturer_industries:
+  - manufacturing
+  - industrial
+  - fabricat
+  - packaging
+  - food
+  - coatings
+  - equipment
+
+chamber:
+  - chamber
+  - economic development
+  - kcadc
+  - vistage
+  - tiger 21
+  - " eo "
+  - ypo
+
+supply_chain:
+  - supply chain
+  - inventory
+  - operations
+  - lean
+  - s&op
+  - procurement

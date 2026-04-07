@@ -1,0 +1,6 @@
+neo4j>=5.14
+streamlit>=1.30
+python-dotenv>=1.0
+pandas>=2.0
+rapidfuzz>=3.5
+pyyaml>=6.0
