@@ -1,0 +1,18 @@
+# DVC cache and local state
+.dvc/cache
+.dvc/tmp
+
+# Large derived table blobs (tracked via .dvc pointers)
+/data/tables/**
+!/data/tables/
+!/data/tables/.gitkeep
+!/data/tables/**/
+!/data/tables/**/*.dvc
+!/data/tables/**/.gitkeep
+!/data/tables/manifest/
+!/data/tables/manifest/**
+
+# Keep legacy CSV paths gitignored
+/data/inbox/*.csv
+/data/snapshots/*.csv
+/data/archive/*.csv

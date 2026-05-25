@@ -2,6 +2,16 @@
 data/inbox/*.csv
 data/snapshots/*.csv
 data/archive/*.csv
+data/tables/**
+!data/tables/
+!data/tables/.gitkeep
+!data/tables/**/
+!data/tables/**/*.dvc
+!data/tables/**/.gitkeep
+!data/tables/manifest/
+!data/tables/manifest/**
+.dvc/cache
+.dvc/tmp
 __pycache__/
 *.pyc
 .venv/

@@ -3,14 +3,20 @@
 Graph navigator for warm paths from Patrick's LinkedIn network to KC manufacturer targets.
 
 ## Stack
-Neo4j 5 (Docker) · Python · Streamlit · rapidfuzz
+Neo4j 5 (Docker) · Python · Streamlit · rapidfuzz · DVC (local data store)
+
+## Data
+
+LinkedIn archive zips live in Dropbox (see `LINKEDIN_ARCHIVE_PATH` in `.env.example`). Derived tables use DVC with local remote at `/Users/jpmcdonald/DVC/Prospector`. Details: [data/README.md](data/README.md).
+
+Install DVC when needed: `pip install dvc` or `brew install dvc`.
 
 ## One-time setup
 
 1. **Configure env**
    ```bash
    cp .env.example .env
-   # edit .env and set NEO4J_PASSWORD
+   # edit .env: NEO4J_PASSWORD and LINKEDIN_ARCHIVE_PATH if needed
    ```
 
 2. **Start Neo4j**
@@ -33,6 +39,10 @@ Neo4j 5 (Docker) · Python · Streamlit · rapidfuzz
    ```
 
 ## Weekly connections refresh
+
+**Target (planned):** quasi-weekly LinkedIn archive zips in Dropbox → parse → `data/tables/` → Neo4j.
+
+**Interim:** single connections CSV:
 
 1. Export connections from LinkedIn → drop the CSV into `data/inbox/`
 2. Run:
